@@ -16,8 +16,8 @@ vector<string> cargar_listado(const string & nombre_archivo){
     }
     string line;
    
-    while(!infile.eof()) {
-        getline(infile, line);
+    while(getline(infile, line)) {
+        line.pop_back();
         palabras_validas.push_back(line);
     }
     infile.close();
