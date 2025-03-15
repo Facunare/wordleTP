@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/workspaces/wordleTP/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++   -g -std=gnu++20 -o CMakeFiles/wordle.dir/wordle.cpp.o -c /workspaces/wordleTP/wordle.cpp",
+  "file": "/workspaces/wordleTP/wordle.cpp"
+},
+{
+  "directory": "/workspaces/wordleTP/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++   -g -std=gnu++20 -o CMakeFiles/wordle.dir/lib.cpp.o -c /workspaces/wordleTP/lib.cpp",
+  "file": "/workspaces/wordleTP/lib.cpp"
+},
+{
+  "directory": "/workspaces/wordleTP/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -isystem /workspaces/wordleTP/build/_deps/googletest-src/googletest/include -isystem /workspaces/wordleTP/build/_deps/googletest-src/googletest -g -std=gnu++20 -o CMakeFiles/tests.dir/tests/tests.cpp.o -c /workspaces/wordleTP/tests/tests.cpp",
+  "file": "/workspaces/wordleTP/tests/tests.cpp"
+},
+{
+  "directory": "/workspaces/wordleTP/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -isystem /workspaces/wordleTP/build/_deps/googletest-src/googletest/include -isystem /workspaces/wordleTP/build/_deps/googletest-src/googletest -g -std=gnu++20 -o CMakeFiles/tests.dir/lib.cpp.o -c /workspaces/wordleTP/lib.cpp",
+  "file": "/workspaces/wordleTP/lib.cpp"
+},
+{
+  "directory": "/workspaces/wordleTP/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/workspaces/wordleTP/build/_deps/googletest-src/googlemock/include -I/workspaces/wordleTP/build/_deps/googletest-src/googlemock -isystem /workspaces/wordleTP/build/_deps/googletest-src/googletest/include -isystem /workspaces/wordleTP/build/_deps/googletest-src/googletest -g -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++20 -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /workspaces/wordleTP/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/workspaces/wordleTP/build/_deps/googletest-src/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/workspaces/wordleTP/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -isystem /workspaces/wordleTP/build/_deps/googletest-src/googlemock/include -isystem /workspaces/wordleTP/build/_deps/googletest-src/googlemock -isystem /workspaces/wordleTP/build/_deps/googletest-src/googletest/include -isystem /workspaces/wordleTP/build/_deps/googletest-src/googletest -g -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++20 -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /workspaces/wordleTP/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/workspaces/wordleTP/build/_deps/googletest-src/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/workspaces/wordleTP/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/workspaces/wordleTP/build/_deps/googletest-src/googletest/include -I/workspaces/wordleTP/build/_deps/googletest-src/googletest -g -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++20 -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /workspaces/wordleTP/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/workspaces/wordleTP/build/_deps/googletest-src/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/workspaces/wordleTP/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -isystem /workspaces/wordleTP/build/_deps/googletest-src/googletest/include -isystem /workspaces/wordleTP/build/_deps/googletest-src/googletest -g -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++20 -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /workspaces/wordleTP/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/workspaces/wordleTP/build/_deps/googletest-src/googletest/src/gtest_main.cc"
+}
+]
