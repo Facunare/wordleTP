@@ -15,10 +15,15 @@ vector<string> cargar_listado(const string & nombre_archivo){
         exit(1);
     }
     string line;
-   
-    while(getline(infile, line)) {
-        line.pop_back();
-        palabras_validas.push_back(line);
+
+    while(!infile.eof()) {
+        if(getline(infile, line)){
+            // Las palabras tienen "escondido" el caracter de salto de linea (excepto en la ultima palabra) -> lo borramos. 
+            if (line.back() == '\r' || line.back() == '\n') {
+                line.pop_back();
+            }
+            palabras_validas.push_back(line);
+        }      
     }
     infile.close();
 
@@ -28,8 +33,8 @@ vector<string> cargar_listado(const string & nombre_archivo){
 
 bool intento_valido(const string & intento, const string & palabra_secreta, const vector<string> &listado){
 
-    if(intento.length() == palabra_secreta.length()){
-        for(int i = 0; i < listado.size(); i++){
+    if(intento.length() == palabra_secreta.length()){ // Chequeo que tengan igual longitud
+        for(int i = 0; i < listado.size(); i++){ // Chequeo que la palabra secreta este en la lista de palabras validas
             if(intento == listado[i]){
                 return true;
             }
@@ -41,24 +46,24 @@ bool intento_valido(const string & intento, const string & palabra_secreta, cons
 
 vector<EstadoLetra> evaluar_intento(const string & intento, const string & palabra_secreta){
    
-    vector<EstadoLetra> posiciones = {};
+    vector<EstadoLetra> estados = {};
     int indexIntento = 0;
     int indexSecreta = 0;
     while(indexIntento < intento.length()){
         indexSecreta = 0;
         while(indexSecreta < palabra_secreta.length()){
             if(intento[indexIntento] == palabra_secreta[indexSecreta] && indexIntento==indexSecreta){
-                posiciones.push_back(EstadoLetra::LugarCorrecto);
+                estados.push_back(EstadoLetra::LugarCorrecto);
                 break;
             }else if(intento[indexIntento] == palabra_secreta[indexSecreta] && indexIntento!=indexSecreta){
-                posiciones.push_back(EstadoLetra::LugarIncorrecto);
+                estados.push_back(EstadoLetra::LugarIncorrecto);
                 break;
             }
            
             indexSecreta++;
 
-            if(indexSecreta==5){
-                posiciones.push_back(EstadoLetra::NoPresente);
+            if(indexSecreta==palabra_secreta.length()){
+                estados.push_back(EstadoLetra::NoPresente);
             }
         }
 
@@ -66,7 +71,7 @@ vector<EstadoLetra> evaluar_intento(const string & intento, const string & palab
        
     }
 
-    return posiciones;
+    return estados;
 }
 
 string respuesta_en_string(const vector<EstadoLetra> & respuesta){
