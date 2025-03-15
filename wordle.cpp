@@ -15,7 +15,6 @@ int main(){
     srand(time(0)); // uso esta linea para que rand() no retorne siempre el mismo valor
     string palabra_secreta = listado[rand() % listado.size()];
     cout << "La palabra secreta tiene " << palabra_secreta.length() << " letras." << endl;
-
     
     int cantIntentos = 6;
 

@@ -34,7 +34,8 @@ vector<string> cargar_listado(const string & nombre_archivo){
 bool intento_valido(const string & intento, const string & palabra_secreta, const vector<string> &listado){
 
     if(intento.length() == palabra_secreta.length()){ // Chequeo que tengan igual longitud
-        for(int i = 0; i < listado.size(); i++){ // Chequeo que la palabra secreta este en la lista de palabras validas
+        // Chequeo que la palabra secreta este en la lista de palabras validas
+        for(int i = 0; i < listado.size(); i++){ 
             if(intento == listado[i]){
                 return true;
             }
@@ -49,6 +50,8 @@ vector<EstadoLetra> evaluar_intento(const string & intento, const string & palab
     vector<EstadoLetra> estados = {};
     int indexIntento = 0;
     int indexSecreta = 0;
+
+    // por cada letra del intento, recorro toda la palabra secreta
     while(indexIntento < intento.length()){
         indexSecreta = 0;
         while(indexSecreta < palabra_secreta.length()){
